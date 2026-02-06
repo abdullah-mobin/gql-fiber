@@ -8,7 +8,7 @@ package resolver
 import (
 	"context"
 	"gql-fiber/internal/graphql/generated"
-	"gql-fiber/internal/graphql/service"
+	"gql-fiber/internal/service"
 )
 
 // Hello is the resolver for the hello field.
