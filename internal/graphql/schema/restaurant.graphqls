@@ -1,0 +1,5 @@
+extend type Query {
+    name: String!
+    roll: String!
+    thikana: String!
+}

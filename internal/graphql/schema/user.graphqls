@@ -1,0 +1,29 @@
+type AuthPayload {
+  accessToken: String!
+}
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+type Mutation {
+  login(input: LoginInput!): AuthPayload!
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  phone: String!
+  address: String
+  createdAt: DateTime!
+
+  # relationships
+  orders: [Order!]!
+}
+
+extend type Query {
+  user(id: ID!): User
+  users: [User!]!
+}

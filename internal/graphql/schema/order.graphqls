@@ -1,0 +1,16 @@
+type Order {
+  id: ID!
+  serialNo: String!
+  quantity: Int!
+  expense: Float!
+  createdAt: DateTime!
+
+  # relationship
+  user: User!
+}
+
+scalar DateTime
+
+extend type Query{
+    orders: [Order!]
+}
